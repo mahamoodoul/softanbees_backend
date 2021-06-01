@@ -1,0 +1,116 @@
+#particles{
+    width: 100%;
+    height: 500px !important;
+}
+.intro{
+    margin-top: -333px !important;
+    text-align: center;
+}
+
+.input-btn-main{
+  border-radius: 25px !important;
+  height: 80px !important;
+}
+
+
+
+
+.flex1 {
+    display: flex;
+  }
+  .flex2 {
+    flex: 1;
+  }
+
+.btn-journey {
+    position: absolute !important;
+    z-index: 10 !important;
+    margin-left: -8rem;
+    margin-top: 18px;
+    text-decoration: none;
+    text-align: center;
+    color: #17171d;
+    background-color: #f16161;
+    border-radius: 10px !important;
+    border: 5px solid #f16161 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    height: 40px;
+    padding: 4px 14px;
+    min-height: 30px;
+    min-width: 100px;
+    padding-bottom: 4.5px;
+    padding-top: 5.5px;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    opacity: 0.9;
+  }
+  
+  .btn-journey:hover {
+    color: #17171d;
+    text-decoration: none;
+    box-shadow: 0 5px 25px #f76c6c;
+    /* box-shadow: 3px 3px 3px 3px #f76C6C; */
+    opacity: 1;
+    transition: background-color 0.5s ease-out, -webkit-box-shadow 0.2s ease-out;
+    transition: background-color 0.5s ease-out, box-shadow 0.2s ease-out;
+    transition: background-color 0.5s ease-out, box-shadow 0.2s ease-out,
+      -webkit-box-shadow 0.2s ease-out;
+  }
+  
+
+
+
+  /* profession select button starts */
+
+#profession {
+  margin:4px;
+  /* float:left; */
+}
+
+#profession label {
+  /* float:left; */
+  width:100px;
+  margin:4px;
+  background-color:#EFEFEF;
+  border-radius:4px;
+  border:1px solid #D0D0D0;
+  overflow:auto;
+  cursor: pointer;
+     
+}
+
+#profession label span {
+  text-align:center;
+  font-size: 13px;
+  padding:13px 0px;
+  display:block;
+  font-weight: bold;
+}
+
+#profession label input {
+  position:absolute;
+  display: none;
+  top:-20px;
+}
+
+#profession input:checked + span {
+  background-color:#f80404;
+  color:#F7F7F7;
+}
+
+
+
+#profession .blue {
+  background-color:#bff109;
+  color:#333;
+}
+
+#profession .green {
+  background-color:#dbb449;
+  color:#333;
+}
+
+
+
+/* end profession selct button */

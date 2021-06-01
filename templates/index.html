@@ -1,0 +1,1007 @@
+
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="{% static 'asset/css/all.min.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'asset/css/particle.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
+</head>
+
+
+<body>
+    <!-- nabvar starts -->
+
+    <nav class="main_nav_content fixed-top navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
+                <ul id="navbar" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#courses">Curriculam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trusting">Benifits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Teaching">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Mentorship">Mentorship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#partnership">Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#footer">About Us</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">FAQs</a>
+                    </li> -->
+                </ul>
+                <div class="d-flex">
+                    <button data-target="#exampleModal" data-toggle="modal" class="button_style_navbar " type="button ">Apply Now</button>
+                    <!-- <button data-target="#exampleModal1" data-toggle="modal" class="button_style_navbar_login " type="submit ">
+              Login
+            </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar ends -->
+
+    <!-- modal login starts -->
+    <div class="modal left fade" id="exampleModal1" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content pt-5">
+                <div class="modal-body p-3">
+                    <div class=" pb-4">
+                        <h3>Log In</h3>
+                        <div class="pt-3">
+                            OR
+                            <a id="create_account_click" style="text-decoration: none;" data-target="#exampleModal" data-toggle="modal" href="">Creating a Softanbees Account</a>
+                        </div>
+                        <div>
+                            <form>
+                                <div class="form-group">
+                                    <label class="d-flex justify-content-start" for="exampleInputEmail1">Email<b style="color: red;">*</b> </label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="d-flex justify-content-start" for="exampleInputPassword1">Password<b style="color: red;">*</b> </label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                                </div>
+                                <button style="width: 100%; background-color: #f76C6C !important; border-color: #f76C6C !important;" type="submit" class="btn btn-primary">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal login ends -->
+
+    <!-- modal registraion starts -->
+    <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content pt-5">
+                <div class="modal-body pt-1">
+                    <div class="text-center pb-4">
+                        <h3>Apply Now to Unleash Your Data Career</h3>
+                        <!-- <p>Log in using</p>
+                        <div class="d-flex justify-content-around">
+                            <a href=""><i  class="fab fa-facebook fa-3x"></i></a>
+                            <a style="color: #4c68d7;" href=""><i class="fab fa-linkedin fa-3x"></i></a>
+                            <a style="color: #4078c0;" href=""><i  class="fab fa-github fa-3x"></i></a>
+                            <a href=""><i  class="fab fa-google fa-3x"></i></a>
+                        </div> -->
+                        <div class="d-flex justify-content-around pt-4 pb-4">
+                            <!-- <hr style="width:50%" , size="3" , color=black>
+                            <p> OR </p>
+                            <hr style="width:50%" , size="3" , color=black> -->
+                        </div>
+                        <div>
+                            <form method="post" enctype="multipart/form-data" >
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label class="d-flex justify-content-start" for="exampleInputEmail1">Full Name <b style="color: red;">*</b> </label>
+                                    <input type="text" name ="name" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="d-flex justify-content-start" for="exampleInputEmail1">Email<b style="color: red;">*</b> </label>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label class="d-flex justify-content-start" for="exampleInputPassword1">Phone<b style="color: red;">*</b> </label>
+                                    <p class="d-flex justify-content-start"><small>OTP will be sent to this number for verification</small></p>
+                                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone Number">
+                                </div> -->
+                                <!-- <div class="form-group">
+                                    <label class="d-flex justify-content-start" for="exampleInputPassword1">Profession<b style="color: red;">*</b> </label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">College Student</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">Working Profesion</label>
+                                    </div>
+                                </div> -->
+                                <div class="form-group">
+                                    <h6>Your Profession </h6>
+                                    <div id="profession">
+                                        <label class="blue" >
+                                            <input id="check1" type="radio" name="toggle" value="student">
+                                            <span>College Student</span></label>
+                                        <label class="green">
+                                            <input id="check1" type="radio" name="toggle" value="working"><span>Working Profession</span></label>
+                                    </div>
+                                </div>
+                                <button style="width: 100%; background-color: #f76C6C !important; border-color: #f76C6C !important;" type="submit" class="btn btn-primary">Apply Now</button>
+                            </form>
+                            <!-- <small>By creating an account I have read and agree to Softanbees <a href="">Terms</a> and <a href="">Privacy Policy</a></small>
+                            <div class="pt-3">
+                                <p>Already a member?
+                                    <a id="login-btn-click" data-target="#exampleModal1" data-toggle="modal" href="">LOG IN</a>
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal registration ends -->
+
+
+    <!-- banner starts -->
+    <!-- <section class="banner_header "> -->
+    <!-- <canvas  style="background: white;" width="500" height="500" id="canvas"></canvas> -->
+    <section id="particles_section" style="padding-bottom: 80px;" >
+        <div id="particles">
+            <div class="intro pb-5 ">
+                <div class="container">
+                    <h1>Drop Your Email Now to Join our Free Class and Start your Data Journey Now!!</h1>
+                    <div class="input-group mt-5">
+                        <input type="text" class="form-control input-btn-main" placeholder="Email Here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-journey " type="button">Start Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- </section> -->
+    <!-- banner ends -->
+
+
+    <!-- System and probelm starts -->
+    <section class="banner_transparent ">
+        <div class="container banner_over align-items-center ">
+            <div class="text-center ">
+                <h3>
+                    A program for data enthusiasts to learn <b>industry standard data product research and development</b>
+                </h3>
+            </div>
+            <div class="system_box_margin ">
+                <div class="row m-2 ">
+                    <div style="background-color:#F8E9A1 " class="m-4 col-sm-12 col-md-3 system_box ">
+                        <img src="https://assets.scaler.com/assets/academy/svg/at-a-glance/structured-c36517d8d41efb3a24cbcb3fe1c8b27ffcfacb6b1462ec3e60516504a07eaff6.svg.gz " alt=" ">
+                        <h4>Flexible and user oriented, industry vetted curriculum</h4>
+                    </div>
+                    <div style="background-color:#F76C6C " class=" m-4 col-sm-12 col-md-3 system_box ">
+                        <img src="https://assets.scaler.com/assets/academy/svg/at-a-glance/live-classes-afff2e39f63a26a19ee4ae844d4b0891c20c50e4b670a224564640cbb973f867.svg.gz " alt=" ">
+                        <h4>Live classes by data veterans and expert faculties</h4>
+                    </div>
+                    <div style="background-color:#A8D0E6 " class=" m-4 col-sm-12 col-md-3 system_box ">
+                        <img src="https://assets.scaler.com/assets/academy/svg/at-a-glance/project1-9fc6130d4e271198d5f051da0712b27627c872a353dac61c91f248e4f60b6ddf.svg.gz " alt=" ">
+                        <h4>Practical experience through real life industry projects</h4>
+                    </div>
+                    <div style="background-color:#F76C6C " class="m-4 col-sm-12 col-md-3 system_box ">
+                        <img src="https://assets.scaler.com/assets/academy/svg/at-a-glance/flexibility-94067174b36a4a38b3448219f64ccd3e42b3f32667c5ff0ec8d8fab665525d87.svg.gz " alt=" ">
+                        <h4>Regular one & one mentorship by industry experts</h4>
+                    </div>
+                    <div style="background-color:#A8D0E6 " class="m-4 col-sm-12 col-md-3 system_box ">
+                        <img src="https://assets.scaler.com/assets/academy/svg/at-a-glance/career-support-c92399914995cba52680341de44c1ce49d292b1de0f10aeb58c3c58a79e3ad3b.svg.gz " alt=" ">
+                        <h4>Direct support in data science based research </h4>
+                    </div>
+                    <div style="background-color:#F8E9A1 " class="m-4 col-sm-12 col-md-3 system_box ">
+                        <img src="https://assets.scaler.com/assets/academy/svg/at-a-glance/mentor-efc7b3e100e7f2bd17f1f95f4ca28b5205ac3f4e04d4cddd064a800cc63f1c74.svg.gz " alt=" ">
+                        <h4>Following 80/20 principal in training program design</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- System and probelm  ends -->
+
+    <!-- Course starts -->
+
+    <section id="courses" class="section upcomming_courses" style="background-color: antiquewhite;">
+        <div class="container pt-5">
+            <h4 class="text-center">UPCOMING COURSES AND PROGRAMS</h4>
+            <br />
+            <!-- Nav tabs -->
+            <ul class="nav justify-content-center nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active tab_link_design" data-toggle="tab" href="#home">Data Sicence</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tab_link_design" data-toggle="tab" href="#menu1"
+              >Business Analytics</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tab_link_design" data-toggle="tab" href="#menu2"
+              >Machine Learning</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="home" class="tab_main_content container tab-pane active">
+            <br />
+            <div class="items-course">
+             
+                <div class="item-course">
+                    <div class="card" style="width: 20rem; height: 30rem;">
+                        <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/data-science-with-r.jpg" alt="Card image cap" />
+                        <div class="card-body recomonded-card">
+                            <h5>Practical Data Science with R</h5>
+                            <p class="card-text">
+                                R provides objects model and visualize data. 
+                                R is used for data analysis. and statistical modeling. 
+                                R is an environment for statistical analysis.
+                            </p>
+                            <a href="" data-target="#exampleModal" data-toggle="modal"
+                                >Download Course Catalog <i  class="fas fa-file-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-course">
+                    <div class="card" style="width: 20rem; height: 30rem;">
+                    <img style="height: 200px !important;"
+                        class="card-img-top"
+                        src="{% static '' %}asset/data science-1.jpg"
+                        alt="Card image cap"
+                    />
+                        <div class="card-body recomonded-card">
+                                <h5>Industrial Data Science with Python</h5>
+                                <p class="card-text">
+                                    For data scientists,need to incorporate statistical code into production databases or integrate data with web-based applications,
+                                    Python is often the ideal choice. 
+                                </p>
+                                <a href="" data-target="#exampleModal" data-toggle="modal"
+                                >Download Course Catalog <i  class="fas fa-file-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+        </div>
+        <div id="menu1" class=" tab_main_content container tab-pane fade">
+            <br />
+            <div class="items-course">
+                <div class="item-course">
+                    <div class="card" style="width: 20rem; height: 30rem;">
+                        <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/data-analyst.png" alt="Card image cap" />
+                        <div class="card-body recomonded-card">
+                            <h5> Data Analyst</h5>
+                            <p class="card-text">
+                                Data Analysis become one of the most high-in-demand jobs around the world. As a result,
+                                Data Analyst salary in India is significantly higher than other software related professionals
+                            </p>
+                            <a href="" data-target="#exampleModal" data-toggle="modal"
+                                >Download Course Catalog <i  class="fas fa-file-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+        <div id="menu2" class="tab_main_content container tab-pane fade">
+            <br />
+            <div class="items-course">
+                <div class="item-course">
+                    <div class="card" style="width: 20rem; height: 30rem;">
+                        <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/deep learning.jpeg" alt="Card image cap" />
+                        <div class="card-body recomonded-card">
+                            <h5>Deep learning Mastery</h5>
+                            <p class="card-text">
+                                Deep learning is a  artificial intelligence that has networks capable of learning unsupervised from 
+                                data that is unstructured or unlabeled.
+                            </p>
+                            <a href="" data-target="#exampleModal" data-toggle="modal"
+                            >Download Course Catalog <i  class="fas fa-file-download"></i></a>
+                    </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-course">
+                    <div class="card" style="width: 20rem; height: 30rem;">
+                        <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/fusion-course.png" alt="Card image cap" />
+                        <div class="card-body recomonded-card">
+                            <h5>Fusion Course for job (India context)</h5>
+                            <p class="card-text">
+                                Deep learning is a  artificial intelligence that has networks capable of learning unsupervised from 
+                                data that is unstructured or unlabeled.
+                            </p>
+                            <a href="" data-target="#exampleModal" data-toggle="modal"
+                                >Download Course Catalog <i  class="fas fa-file-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- course ends -->
+
+    <!-- Benifits -->
+<section style="background-color: white;" id="trusting">
+    <div class="container text-center pt-4">
+        <h3>Why Trusting Us?</h3>
+        <div class="row ">
+            <div class="col-sm col-md-4 ">
+                <div class="corporate p-2 m-3 pt-4 pb-3 box_border" >
+                    <h5>Nubmer of Corporates</h5>
+                    <h5><span class="count" >7</span> +</h5>
+                  
+                </div>
+            </div>
+            <div class="col-sm col-md-4 ">
+                <div class="products p-2 m-3 pt-4 pb-3 box_border">
+                    <h5>Nubmer of Products </h5>
+                    <h5><span class="count" >10</span> +</h5>
+                </div>
+            </div>
+            <div class="col-sm col-md-4 ">
+                <div class="scientist p-2 m-3 pt-4 pb-3 box_border" >
+                    <h5>Total Trained Data Scientist</h5>
+                    <h5><span class="count">120</span> +</h5>
+                </div>
+            </div>
+               
+            
+            <div class="col-sm col-md-4 ">
+                <div class="intership p-2 m-3 pt-4 pb-3 box_border" >
+                    <h5>Total Paid Internship Provided</h5>
+                    <h5> <span class="count">25</span> +</h5>
+                </div>
+            </div>
+            <div class="col-sm col-md-4">
+                <div class="aspirants p-2 m-3 pt-4 pb-3 box_border">
+                    <h5>Total Aspirants Reached</h5>
+                    <h5><span class="count">2500</span> +</h5>
+                </div>
+            </div>
+            <div class="col-sm col-md-4">
+                <div class="trained p-2 m-3 pt-4 pb-3 box_border">
+                    <h5>Total Trained Data Scientist</h5>
+                    <h5><span class="count">120</span> +</h5>
+                </div>
+            </div>
+              
+            </div>
+        </div>
+    </div>
+    <!-- End benifits -->
+ </section>
+
+    <!-- testimonial starts -->
+
+    <section id="Teaching" style="background-color:darkgrey; " class="section testimonial_section ">
+        <div class="container testimonial ">
+            <h1 style="text-align: center; ">Your learning is important. It’s a good idea to go through
+                <b> reviews of previous students</b> to make an informed decision</h1>
+            <p style="text-align: center; ">1,000+ working professionals have joined the Softanbees Academy family!</p>
+            <div class="items ">
+                <div class="item image-name-testimonial ">
+                    <div class="flex-items ">
+                        <div class="flex-item ">
+                            <img src="{% static '' %}asset/person-1.jpeg" alt=" ">
+                        </div>
+                        <div style="width: 200px; " class="flex-item ">
+                            <p>Ujjal Kumar</p>
+                            <p><span>Sr. Engineer</span></p>
+                        </div>
+                        <div class="flex-item ">
+                            <img src="{% static '' %}asset/logo.jpg " alt=" ">
+                        </div>
+                    </div>
+                    <div class="testimonial-content ">
+                        <p>This training program helped me a lot to better understand the data that we had in our organization. I will get to know how I can use my domain knowledge for better understanding . The instructors are pretty good at explaining all the concepts as well as the practical assessment . I would like to recommend this training program as a starter to get into the world of data science</p>
+                    </div>
+                    <div class="read_more ">
+                        <button class="btn btn-danger ">Read More ></button>
+                    </div>
+                </div>
+                <div class="item image-name-testimonial ">
+                    <div class="flex-items ">
+                        <div class="flex-item ">
+                            <img src="{% static '' %}asset/person-1.jpeg" alt=" ">
+                        </div>
+                        <div style="width: 200px; " class="flex-item ">
+                            <p>Ujjal Kumar</p>
+                            <p><span>Sr. Engineer</span></p>
+                        </div>
+                        <div class="flex-item ">
+                            <img src="{% static '' %}asset/logo.jpg " alt=" ">
+                        </div>
+                    </div>
+                    <div class="testimonial-content ">
+                        <p>This training program helped me a lot to better understand the data that we had in our organization. I will get to know how I can use my domain knowledge for better understanding . The instructors are pretty good at explaining all the concepts as well as the practical assessment . I would like to recommend this training program as a starter to get into the world of data science</p>
+                    </div>
+                    <div class="read_more ">
+                        <button class="btn btn-danger ">Read More ></button>
+                    </div>
+                </div>
+                <div class="item image-name-testimonial ">
+                    <div class="flex-items ">
+                        <div class="flex-item ">
+                            <img src="{% static '' %}asset/person-1.jpeg" alt=" ">
+                        </div>
+                        <div style="width: 200px; " class="flex-item ">
+                            <p>Ujjal Kumar</p>
+                            <p><span>Sr. Engineer</span></p>
+                        </div>
+                        <div class="flex-item ">
+                            <img src="{% static '' %}asset/logo.jpg " alt=" ">
+                        </div>
+                    </div>
+                    <div class="testimonial-content ">
+                        <p>This training program helped me a lot to better understand the data that we had in our organization. I will get to know how I can use my domain knowledge for better understanding . The instructors are pretty good at explaining all the concepts as well as the practical assessment . I would like to recommend this training program as a starter to get into the world of data science</p>
+                    </div>
+                    <div class="read_more ">
+                        <button class="btn btn-danger ">Read More ></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- testimonial Ends -->
+
+
+    <!-- advantage starts -->
+    <section>
+        <div class="adventage ">
+            <div class=" ">
+                <div class="row ">
+                    <div class="adventage-info-1 col-sm-6 header-content ">
+                        <h4 class="adventage-paragraph ">Summer Internship</h4>
+                        <p class="adventage-paragraph ">Would you like to work with real time industry data and get to know the real time
+                            problems companies are facing? Join our summer intership program to get
+                            the holistic experience about this trending skills.</p>
+                        <button class="adventage-btn ">See you are eligible for program?</button>
+                    </div>
+                    <div class="adventage-info col-sm-6 header-content ">
+                        <h4 class="adventage-paragraph ">Professional Internship Program</h4>
+                        <p class="adventage-paragraph ">Would you like to nurture your skills to become job ready for the emerging data world? Join 
+                            our training program after that you will get a chance to join softanbees as intern with monthly
+                            stipend.</p>
+                        <button class="adventage-btn ">See you are eligible for program?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- advantage ends -->
+
+
+    <!-- mentor starts  -->
+
+    <section id="Mentorship" style="background-color: grey; " class="section pt-5 pb-5 mentroship_section ">
+        <div class="container menotr ">
+            <h2 style="text-align: center; ">Our <b>teaching army</b> will make you <b>confident about your fundamentals</b> </h2>
+            <p>Our tutors have built scalable systems and realise the real-life importance of DSA and System Design, not just in interviews but throughout your career</p>
+            <div class="mentor-items ">
+                <div class="mentor-item ">
+                    <div class="card card-item " style="width: 18rem; ">
+                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Mahmud Shakil</h5>
+                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <div class="mentor_read_more ">
+                                <a class=" read_more_btn btn " href="# ">Read more ></a>
+                                <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor-item ">
+                    <div class="card card-item " style="width: 18rem; ">
+                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Mahmud Shakil</h5>
+                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <div class="mentor_read_more ">
+                                <a class=" read_more_btn btn " href="# ">Read more ></a>
+                                <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor-item ">
+                    <div class="card card-item " style="width: 18rem; ">
+                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Mahmud Shakil</h5>
+                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <div class="mentor_read_more ">
+                                <a class=" read_more_btn btn " href="# ">Read more ></a>
+                                <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor-item ">
+                    <div class="card card-item " style="width: 18rem; ">
+                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Mahmud Shakil</h5>
+                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <div class="mentor_read_more ">
+                                <a class=" read_more_btn btn " href="# ">Read more ></a>
+                                <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor-item ">
+                    <div class="card card-item " style="width: 18rem; ">
+                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Mahmud Shakil</h5>
+                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <div class="mentor_read_more ">
+                                <a class=" read_more_btn btn " href="# ">Read more ></a>
+                                <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- softanbess mentor starts -->
+
+    <section id="Mentorship" class="becomae_menotr section pt-5 pb-5 ">
+        <div class="container ">
+            <div class="row d-flex justify-content-center text-center ">
+                <div class="col-sm col-md-3 ">
+                    <img src="https://assets.scaler.com/assets/scaler/png/Group 242-ad5ecbe718f9788691d11aa1b9bfaa5d5c889fbcbeb806f4e73de269007c05f3.png.gz " alt=" ">
+                </div>
+                <div class="col-sm col-md-6 ">
+                    <h2>Become a Softanbees Mentor</h2>
+                    <p>A chance to give back to the community. Mentor Scaler students and help them unlock their true potential.</p>
+                </div>
+                <div class="col-sm col-md-3 ">
+                    <button data-target="#exampleModal" data-toggle="modal" class="btn know_more_info ">Know More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- softanbess mentor ends -->
+
+    <!-- partnership starts -->
+
+    <section id="partnership" style="background-color: aliceblue; " class="section pt-5 pb-5 ">
+        <div class="container ">
+            <h3 style="text-align: center; ">Our alumni work at reputed technology companies and promising startups</h3>
+            <div class="row partnership pt-5 ">
+
+                <div class="col-sm-6 col-md-6 individul-part d-flex justify-content-center ">
+                    <div class="partnership-items ">
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_1.jpeg" alt=" ">
+                        </div>
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_2.png" alt=" ">
+                        </div>
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_3.png" alt=" ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 individul-part d-flex justify-content-center ">
+                    <div class="partnership-items ">
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_4.jpg" alt=" ">
+                        </div>
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_1.jpeg" alt=" ">
+                        </div>
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_2.png" alt=" ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 individul-part d-flex justify-content-center ">
+                    <div class="partnership-items ">
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_1.jpeg" alt=" ">
+                        </div>
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_2.png" alt=" ">
+                        </div>
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_3.png" alt=" ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 individul-part d-flex justify-content-center ">
+                    <div class="partnership-items ">
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_4.jpg" alt=" ">
+                        </div>
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_1.jpeg" alt=" ">
+                        </div>
+                        <div class="partnership-item ">
+                            <img style="width: 100%; " src="{% static '' %}asset/partner_2.png" alt=" ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- partnership ends -->
+
+
+<!-- get to know us starts -->
+    <section id="contact" style="background-color: azure; " class="get_to_know_us section pt-5 pb-5 ">
+        <div class="container text-center ">
+            <div class="mt-4 mb-5 ">
+                <h2> Get to know us ! </h2>
+                <h5> Benefit from our free resources</h5>
+            </div>
+            <div class="row ml-0.5 ">
+                <div class="col-sm col-md-4 ">
+                    <div class="card ">
+                        <div class="card-body text-center ">
+                            <div class="mt-4">
+                                <h5> <img style="width: 15%;" src="{% static 'asset/aa.png' %}" alt=" "> InterviewBit </h5>
+                            </div>
+                            <div class="mt-4 ">
+                                <p>We teach you the basics of some of the most important topics in any <b>Softanbees developer’s toolkit</b> , through 1-2 day live classes taken by some of our top Sofanbess Academy faculty. You can use these especially to
+                                    get comfortable with our quality and style of teaching!</p>
+                            </div>
+                            <div class="mt-5 ">
+                                <a style="font-weight: 700; text-decoration: none; " href=" ">Technical Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm col-md-4 ">
+                    <div class="card ">
+                        <div class="card-body text-center ">
+                            <div class="mt-4 ">
+                                <h5> <img src="https://assets.scaler.com/assets/academy/svg/micro-courses-4dd8e8c494f79a27ed89029a43b5dcb00e204d35b0b3a5ee2cd7c00ba02a088b.svg.gz " alt=" "> MasterClass</h5>
+                            </div>
+                            <div class="mt-4 ">
+                                <p>We teach you the basics of some of the most important topics in any <b>Softanbees developer’s toolkit</b> , through 1-2 day live classes taken by some of our top Sofanbess Academy faculty. You can use these especially to
+                                    get comfortable with our quality and style of teaching!</p>
+                            </div>
+                            <div class="mt-5 ">
+                                <a style="font-weight: 700; text-decoration: none; " href=" ">Webinar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm col-md-4 ">
+                    <div class="card ">
+                        <div class="card-body text-center ">
+                            <div class="mt-4 ">
+                                <h5><img src="https://assets.scaler.com/assets/academy/svg/AMA-3d8298d9e3eef7773d210bfc895d60c6f97a18691a5496a477f0f36c15061b60.svg.gz " alt=" "> Ask me Anything (AMAs)</h5>
+                            </div>
+                            <div class="mt-4 ">
+                                <p>Connect live with our faculty, mentors, students and alumni, who help you get answers to a wide range of questions, ranging from <b>importance of DSA / System Design to clearing interviews</b>, building a career and achieving
+                                    success. Catch these live on any kind of support:</p>
+                            </div>
+                            <div class="mt-5 ">
+                                <a style="font-weight: 700; text-decoration: none; " href=" ">REGISTER FOR NEXT AMA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button data-target="#exampleModal" data-toggle="modal" type="button " class="btn btn-danger ">Apply Now</button>
+        </div>
+    </section>
+<!-- get to know us ends  -->
+
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer id="footer" class="footer text-dark d-flex-column text-center">
+    <hr class="mt-0">
+    <!--Social buttons-->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+  
+      <!-- Twitter -->
+      <a class="btn btn-outline-dark  btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+  
+      <!-- Google -->
+      <a class="btn btn-outline-dark  btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+  
+      <!-- Instagram -->
+      <a class="btn btn-outline-dark  btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+  
+      <!-- Linkedin -->
+      <a class="btn btn-outline-dark  btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+  
+      <!-- Github -->
+      <a class="btn btn-outline-dark  btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-dark mb-4">
+              <input type="email" id="form5Example2" class="form-control" placeholder="Enter Your Email Here" />
+              <!-- <label class="form-label" for="form5Example2">Email address</label> -->
+            </div>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button style="height: 40px; width: 150px !important;" type="submit" class="button-style mb-4">
+              Subscribe  <i class="fas fa-mail-bulk"> </i>
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+  
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+    <!--/.Social buttons-->
+    <hr class="mb-0">
+    <!--Footer Links-->
+    <div class="container text-left text-md-center">
+      <div class="row">
+        <!--First column-->
+        <div class="col-md-3 mx-auto shfooter">
+          <h5 class="my-2 font-weight-bold d-none d-md-block">Product</h5>
+          <div class="d-md-none title" data-target="#Product" data-toggle="collapse">
+            <div class="mt-3 font-weight-bold">Product
+              <div class="float-right navbar-toggler">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </div>
+          </div>
+          <ul class="list-unstyled collapse" id="Product">
+            <li><a href="">Create Websites</a></li>
+            <li><a href="">Secure Cloud Hosting</a></li>
+            <li><a href="">Engage Your Audience</a></li>
+            <li><a href="">Website Support</a></li>
+          </ul>
+        </div>
+        <!--/.First column-->
+        <hr class="clearfix w-100 d-md-none mb-0">
+        <!--Second column-->
+        <div class="col-md-3 mx-auto shfooter">
+          <h5 class="my-2 font-weight-bold d-none d-md-block">Company</h5>
+          <div class="d-md-none title" data-target="#Company" data-toggle="collapse">
+            <div class="mt-3 font-weight-bold">Company
+              <div class="float-right navbar-toggler">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </div>
+          </div>
+          <ul class="list-unstyled collapse" id="Company">
+            <li><a href="">About</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">FAQ</a></li>
+          </ul>
+        </div>
+        <!--/.Second column-->
+        <hr class="clearfix w-100 d-md-none mb-0">
+        <!--Third column-->
+        <div class="col-md-3 mx-auto shfooter">
+          <h5 class="my-2 font-weight-bold d-none d-md-block">Resources</h5>
+          <div class="d-md-none title" data-target="#Resources" data-toggle="collapse">
+            <div class="mt-3 font-weight-bold">Resources
+              <div class="float-right navbar-toggler">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </div>
+          </div>
+          <ul class="list-unstyled collapse" id="Resources">
+            <li><a href="">Blog</a></li>
+            <li><a href="">eBooks</a></li>
+            <li><a href="">Whitepapers</a></li>
+            <li><a href="">Comparison Guide</a></li>
+            <li><a href="">Website Grader</a></li>
+          </ul>
+        </div>
+        <!--/.Third column-->
+        <hr class="clearfix w-100 d-md-none mb-0">
+        <!--Fourth column-->
+        <div class="col-md-3 mx-auto shfooter">
+          <h5 class="my-2 font-weight-bold d-none d-md-block">Get Help</h5>
+          <div class="d-md-none title" data-target="#Get-Help" data-toggle="collapse">
+            <div class="mt-3 font-weight-bold">Get Help
+              <div class="float-right navbar-toggler">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </div>
+          </div>
+          <ul class="list-unstyled collapse" id="Get-Help">
+            <li><a href="" target="_blank">Help Center</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Login</a></li>
+          </ul>
+        </div>
+        <!--/.Fourth column-->
+      </div>
+    </div>
+    <!--/.Footer Links-->
+    <hr class="mb-0">
+    <!--Copyright-->
+    <div class="py-3 text-center">
+      Copyright @Softnbees Private Comapny Ltd 2019-
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+    </div>
+    <!--/.Copyright-->
+  </footer>
+  
+  <!-- Footer -->
+<!-- Ends footer -->
+
+    <!-- JQuery -->
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
+    <script type='text/javascript' src='{% static "asset/js/jquery.particleground.min.js" %}'></script>
+    <script type='text/javascript' src='{% static "asset/js/demo.js" %}'></script>
+    <!-- Bootstrap tooltips -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+   <script src="{% static 'asset/js/jquery.countup.js' %}"></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js "></script>
+    <script src="{% static 'asset/js/vanillajs-scrollspy.min.js' %}"></script>
+
+
+</body>
+
+</html>
+
+<script>
+   
+    const navbar = document.querySelector("#navbar");
+    const scrollspy = new VanillaScrollspy(navbar);
+    scrollspy.init();
+         
+    $(document).ready(function() {
+        $("#login-btn-click").click(function() {
+            $('#exampleModal').modal('hide');
+        });
+
+        $("#create_account_click").click(function() {
+            $('#exampleModal1').modal('hide');
+
+        });
+        
+        $('.count').countUp();
+        $('.count').countDown();
+
+        $('.count').countUp({
+            'time': 4000,
+            'delay': 10
+          });
+
+        $('.count').countDown({
+            'time': 4000,
+            'delay': 10
+         });
+
+    });
+
+
+
+
+
+
+
+</script>
