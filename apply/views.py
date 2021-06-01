@@ -11,6 +11,6 @@ def home_apply(request):
         create_apply_object.save()
         
     template_name = 'index.html'
-    context = {}
+    # context = {"You Application has been accepted successfully"}
 
-    return render(request,template_name,context)
+    return render(request,template_name,context={})

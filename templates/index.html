@@ -134,11 +134,11 @@
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <label class="d-flex justify-content-start" for="exampleInputEmail1">Full Name <b style="color: red;">*</b> </label>
-                                    <input type="text" name ="name" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name">
+                                    <input required type="text" name ="name" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name">
                                 </div>
                                 <div class="form-group">
                                     <label class="d-flex justify-content-start" for="exampleInputEmail1">Email<b style="color: red;">*</b> </label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <input required type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                 </div>
                                 <!-- <div class="form-group">
                                     <label class="d-flex justify-content-start" for="exampleInputPassword1">Phone<b style="color: red;">*</b> </label>
@@ -504,7 +504,7 @@
 
 
     <!-- advantage starts -->
-    <section>
+    <!-- <section>
         <div class="adventage ">
             <div class=" ">
                 <div class="row ">
@@ -526,6 +526,70 @@
             </div>
         </div>
         </div>
+    </section> -->
+    <section class="section">
+
+        <div class="tab-wrapper_intern">
+          <ul class="tabs_intern">
+              <li class="tab-links active" data-tab="1">Summer Internship</li>
+              <li class="tab-links" data-tab="2">Professional Internship</li>
+              <!-- <li class="tab-links" data-tab="3">Advance Internship</li> -->
+          </ul>
+        </div>
+        <div class="content-wrapper_intern ">
+         <!-- <div class="imgae_div" > -->
+          <div id="tab-1" class="tab-content_intern active">
+            <div class="row">
+              <div class="col-md-6 pt-3 pb-5 p-3">
+                      <h3>Monitoring Interns and effort for their success</h3>
+                      <p>Would you like to work with real time industry data and get to know the real time problems companies are facing? Join our summer intership program to get the holistic experience about this trending skills.</p>
+    
+                      <a class="btn btn-primary" href="">See you are eligible for program?</a>
+              </div>
+                <div class="col-md-6 img_design pb-5">
+                  <!-- <h3>Monitoring COVID-19 perceptions and hotspots</h3>
+                  <p>Using linguistic markers in Tweets, the team at the Center for Digital Health at Penn Medicine shows how attitudes about COVID-19 vary by region, and can potentially identify emerging hotspots based on aggregate increases in symptoms being discussed. Information from this dashboard can be used by health systems and policy makers to provide current, hyperlocal, and actionable information to their communities.</p>
+                  <a class="btn btn-primary" href="">Relevant endpoints: Filtered stream</a> -->
+                  <img src=" {% static 'asset/Summer-Internship.jpg' %}" alt="">
+                 
+              </div>
+            </div>
+            
+          </div>
+      
+          <div id="tab-2" class="tab-content_intern">
+            <div class="row">
+              <div class="col-md-6 pt-3 pb-5 ">
+                <h3>Professional Internship Program</h3>
+                <p>Would you like to nurture your skills to become job ready for the emerging data world? Join our training program after that you will get a chance to join softanbees as intern with monthly stipend.</p>
+    
+                <a class="btn btn-primary" href="">See you are eligible for program?</a>
+              </div>
+              <div class="col-md-6 img_design pb-5">
+                  <!-- <h3>Monitoring COVID-19 perceptions and hotspots</h3>
+                  <p>Using linguistic markers in Tweets, the team at the Center for Digital Health at Penn Medicine shows how attitudes about COVID-19 vary by region, and can potentially identify emerging hotspots based on aggregate increases in symptoms being discussed. Information from this dashboard can be used by health systems and policy makers to provide current, hyperlocal, and actionable information to their communities.</p>
+                  <a class="btn btn-primary" href="">Relevant endpoints: Filtered stream</a> -->
+                  <img src="{% static 'asset/professional.jpg' %}" alt="">
+              </div>
+              </div>
+          </div>
+      
+          <div id="tab-3"class="tab-content_intern">
+            <div class="row">
+              <div class="col-md-6 pt-3 pb-5 ">
+                <h3>Monitoring COVID-19 perceptions and hotspots</h3>
+                <p>Using linguistic markers in Tweets, the team at the Center for Digital Health at Penn Medicine shows how attitudes about COVID-19 vary by region, and can potentially identify emerging hotspots based on aggregate increases in symptoms being discussed. Information from this dashboard can be used by health systems and policy makers to provide current, hyperlocal, and actionable information to their communities.</p>
+                <a class="btn btn-primary" href="">Relevant endpoints: Filtered stream</a>
+              </div>
+              <div class="col-md-6 img_design pb-5">
+                  <!-- <h3>Monitoring COVID-19 perceptions and hotspots</h3>
+                  <p>Using linguistic markers in Tweets, the team at the Center for Digital Health at Penn Medicine shows how attitudes about COVID-19 vary by region, and can potentially identify emerging hotspots based on aggregate increases in symptoms being discussed. Information from this dashboard can be used by health systems and policy makers to provide current, hyperlocal, and actionable information to their communities.</p>
+                  <a class="btn btn-primary" href="">Relevant endpoints: Filtered stream</a> -->
+                  <img src="asset/bg.jpeg" alt="">
+              </div>
+              </div>
+          </div>  
+      </div>
     </section>
 
     <!-- advantage ends -->
@@ -999,7 +1063,14 @@
     });
 
 
-
+    $('.tab-links').click( function() {
+	
+        var tabID = $(this).attr('data-tab');
+        
+        $(this).addClass('active').siblings().removeClass('active');
+        
+        $('#tab-'+tabID).addClass('active').siblings().removeClass('active');
+      });
 
 
 
