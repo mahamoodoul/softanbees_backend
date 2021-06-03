@@ -8,8 +8,8 @@
 }
 
 .input-btn-main{
-  border-radius: 25px !important;
-  height: 80px !important;
+  border-radius: 10px !important;
+  height: 55px  !important;
 }
 
 
@@ -24,9 +24,11 @@
 
 .btn-journey {
     position: absolute !important;
+    height: 53px !important;
     z-index: 10 !important;
-    margin-left: -8rem;
-    margin-top: 18px;
+    margin-left: -165px;
+    margin-top: 1px !important;
+    width: 165px !important;
     text-decoration: none;
     text-align: center;
     color: #17171d;
@@ -70,7 +72,7 @@
 
 #profession label {
   /* float:left; */
-  width:100px;
+  /* width:100px; */
   margin:4px;
   background-color:#EFEFEF;
   border-radius:4px;
@@ -86,6 +88,7 @@
   padding:13px 0px;
   display:block;
   font-weight: bold;
+  padding: 5px;
 }
 
 #profession label input {
@@ -95,19 +98,21 @@
 }
 
 #profession input:checked + span {
-  background-color:#f80404;
+  background-color:brown;
   color:#F7F7F7;
 }
 
 
 
 #profession .blue {
-  background-color:#bff109;
+  background-color:white;
+  border: 2px solid brown ;
   color:#333;
 }
 
 #profession .green {
-  background-color:#dbb449;
+  background-color:white;
+  border: 2px solid brown ;
   color:#333;
 }
 

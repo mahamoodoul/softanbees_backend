@@ -1,5 +1,3 @@
-
-{% load static %}
 <!DOCTYPE html>
 
 <html>
@@ -8,7 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <link rel="stylesheet" href="{% static 'asset/css/all.min.css' %}">
+    <link rel="stylesheet" href="asset/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,9 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="{% static 'main.css' %}" />
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <link rel="stylesheet" href="{% static 'asset/css/particle.css' %}" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="asset/css/particle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -130,15 +128,14 @@
                             <hr style="width:50%" , size="3" , color=black> -->
                         </div>
                         <div>
-                            <form method="post" enctype="multipart/form-data" >
-                                {% csrf_token %}
+                            <form>
                                 <div class="form-group">
                                     <label class="d-flex justify-content-start" for="exampleInputEmail1">Full Name <b style="color: red;">*</b> </label>
-                                    <input required type="text" name ="name" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name">
                                 </div>
                                 <div class="form-group">
                                     <label class="d-flex justify-content-start" for="exampleInputEmail1">Email<b style="color: red;">*</b> </label>
-                                    <input required type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                 </div>
                                 <!-- <div class="form-group">
                                     <label class="d-flex justify-content-start" for="exampleInputPassword1">Phone<b style="color: red;">*</b> </label>
@@ -159,11 +156,8 @@
                                 <div class="form-group">
                                     <h6>Your Profession </h6>
                                     <div id="profession">
-                                        <label class="blue" >
-                                            <input id="check1" type="radio" name="toggle" value="student">
-                                            <span>College Student</span></label>
-                                        <label class="green">
-                                            <input id="check1" type="radio" name="toggle" value="working"><span>Working Profession</span></label>
+                                        <label class="blue"><input id="check1" type="radio" name="toggle" value="student"><span>College Student</span></label>
+                                        <label class="green"><input id="check1" type="radio" name="toggle" value="working"><span>Working Profession</span></label>
                                     </div>
                                 </div>
                                 <button style="width: 100%; background-color: #f76C6C !important; border-color: #f76C6C !important;" type="submit" class="btn btn-primary">Apply Now</button>
@@ -177,7 +171,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -298,7 +292,7 @@
              
                 <div class="item-course">
                     <div class="card" style="width: 20rem; height: 30rem;">
-                        <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/data-science-with-r.jpg" alt="Card image cap" />
+                        <img style="height: 200px !important;" class="card-img-top" src="asset/data-science-with-r.jpg" alt="Card image cap" />
                         <div class="card-body recomonded-card">
                             <h5>Practical Data Science with R</h5>
                             <p class="card-text">
@@ -306,8 +300,7 @@
                                 R is used for data analysis. and statistical modeling. 
                                 R is an environment for statistical analysis.
                             </p>
-                            <a href="" data-target="#exampleModal" data-toggle="modal"
-                                >Download Catalog </a>
+                            <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog</a>
                         </div>
                     </div>
                 </div>
@@ -315,7 +308,7 @@
                     <div class="card" style="width: 20rem; height: 30rem;">
                     <img style="height: 200px !important;"
                         class="card-img-top"
-                        src="{% static '' %}asset/data science-1.jpg"
+                        src="asset/data science-1.jpg"
                         alt="Card image cap"
                     />
                         <div class="card-body recomonded-card">
@@ -324,8 +317,7 @@
                                     For data scientists,need to incorporate statistical code into production databases or integrate data with web-based applications,
                                     Python is often the ideal choice. 
                                 </p>
-                                <a href="" data-target="#exampleModal" data-toggle="modal"
-                                >Download Catalog</a>
+                                <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog</a>
                         </div>
                     </div>
                 </div>
@@ -337,15 +329,14 @@
             <div class="items-course">
                 <div class="item-course">
                     <div class="card" style="width: 20rem; height: 30rem;">
-                        <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/data-analyst.png" alt="Card image cap" />
+                        <img style="height: 200px !important;" class="card-img-top" src="asset/data-analyst.png" alt="Card image cap" />
                         <div class="card-body recomonded-card">
                             <h5> Data Analyst</h5>
                             <p class="card-text">
                                 Data Analysis become one of the most high-in-demand jobs around the world. As a result,
                                 Data Analyst salary in India is significantly higher than other software related professionals
                             </p>
-                            <a href="" data-target="#exampleModal" data-toggle="modal"
-                                >Download Catalog</a>
+                            <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog</a>
                         </div>
                     </div>
                 </div>
@@ -358,30 +349,27 @@
             <div class="items-course">
                 <div class="item-course">
                     <div class="card" style="width: 20rem; height: 30rem;">
-                        <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/deep learning.jpeg" alt="Card image cap" />
+                        <img style="height: 200px !important;" class="card-img-top" src="asset/deep learning.jpeg" alt="Card image cap" />
                         <div class="card-body recomonded-card">
                             <h5>Deep learning Mastery</h5>
                             <p class="card-text">
                                 Deep learning is a  artificial intelligence that has networks capable of learning unsupervised from 
                                 data that is unstructured or unlabeled.
                             </p>
-                            <a href="" data-target="#exampleModal" data-toggle="modal"
-                            >Download Catalog</a>
-                    </a>
+                            <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog</a>
                         </div>
                     </div>
                 </div>
                 <div class="item-course">
                     <div class="card" style="width: 20rem; height: 30rem;">
-                        <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/fusion-course.png" alt="Card image cap" />
+                        <img style="height: 200px !important;" class="card-img-top" src="asset/fusion-course.png" alt="Card image cap" />
                         <div class="card-body recomonded-card">
                             <h5>Fusion Course for job (India context)</h5>
                             <p class="card-text">
                                 Deep learning is a  artificial intelligence that has networks capable of learning unsupervised from 
                                 data that is unstructured or unlabeled.
                             </p>
-                            <a href="" data-target="#exampleModal" data-toggle="modal"
-                                >Download Catalog</a>
+                            <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog</a>
                         </div>
                     </div>
                 </div>
@@ -456,15 +444,14 @@
                 <div class="item image-name-testimonial ">
                     <div class="flex-items ">
                         <div class="flex-item ">
-                         
-                            <img src="{% static 'asset/person-1.jpeg' %}" alt=" ">
+                            <img src="asset/person-1.jpeg" alt=" ">
                         </div>
                         <div style="width: 200px; " class="flex-item ">
                             <p style="width: 100%;">Ujjal Kumar Naskar</p>
                             <p><span>Sr. Engineer</span></p>
                         </div>
                         <div class="flex-item ">
-                            <img src="{% static 'asset/tata-power.png' %}" alt=" ">
+                            <img src="asset/tata-power.png" alt=" ">
                         </div>
                     </div>
                     <div class="testimonial-content pt-2 ">
@@ -504,6 +491,7 @@
         </div>
         </div>
     </section> -->
+    
     <section class="section">
 
         <div class="tab-wrapper_intern">
@@ -527,8 +515,7 @@
                   <!-- <h3>Monitoring COVID-19 perceptions and hotspots</h3>
                   <p>Using linguistic markers in Tweets, the team at the Center for Digital Health at Penn Medicine shows how attitudes about COVID-19 vary by region, and can potentially identify emerging hotspots based on aggregate increases in symptoms being discussed. Information from this dashboard can be used by health systems and policy makers to provide current, hyperlocal, and actionable information to their communities.</p>
                   <a class="btn btn-primary" href="">Relevant endpoints: Filtered stream</a> -->
-                  <img src=" {% static 'asset/Summer-Internship.jpg' %}" alt="">
-                 
+                  <img src="asset/Summer-Internship.jpg" alt="">
               </div>
             </div>
             
@@ -546,7 +533,7 @@
                   <!-- <h3>Monitoring COVID-19 perceptions and hotspots</h3>
                   <p>Using linguistic markers in Tweets, the team at the Center for Digital Health at Penn Medicine shows how attitudes about COVID-19 vary by region, and can potentially identify emerging hotspots based on aggregate increases in symptoms being discussed. Information from this dashboard can be used by health systems and policy makers to provide current, hyperlocal, and actionable information to their communities.</p>
                   <a class="btn btn-primary" href="">Relevant endpoints: Filtered stream</a> -->
-                  <img src="{% static 'asset/professional.jpg' %}" alt="">
+                  <img src="asset/professional.jpg" alt="">
               </div>
               </div>
           </div>
@@ -568,7 +555,6 @@
           </div>  
       </div>
     </section>
-
     <!-- advantage ends -->
 
 
@@ -581,10 +567,10 @@
             <div class="mentor-items ">
                 <div class="mentor-item ">
                     <div class="card card-item " style="width: 18rem; ">
-                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <img style="height: 210px; " class="card-img-top " src="asset/male.jpg " alt="Card image cap " class="person ">
                         <div class="card-body ">
                             <h5 class="card-title ">Mahmud Shakil</h5>
-                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <p>EX <img style="width: 40%; height:20px " src="asset/ibm.png " alt=" "></p>
                             <div class="mentor_read_more ">
                                 <a class=" read_more_btn btn " href="# ">Read more ></a>
                                 <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
@@ -594,10 +580,10 @@
                 </div>
                 <div class="mentor-item ">
                     <div class="card card-item " style="width: 18rem; ">
-                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <img style="height: 210px; " class="card-img-top " src="asset/male.jpg " alt="Card image cap " class="person ">
                         <div class="card-body ">
                             <h5 class="card-title ">Mahmud Shakil</h5>
-                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <p>EX <img style="width: 40%; height:20px " src="asset/ibm.png " alt=" "></p>
                             <div class="mentor_read_more ">
                                 <a class=" read_more_btn btn " href="# ">Read more ></a>
                                 <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
@@ -607,10 +593,10 @@
                 </div>
                 <div class="mentor-item ">
                     <div class="card card-item " style="width: 18rem; ">
-                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <img style="height: 210px; " class="card-img-top " src="asset/male.jpg " alt="Card image cap " class="person ">
                         <div class="card-body ">
                             <h5 class="card-title ">Mahmud Shakil</h5>
-                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <p>EX <img style="width: 40%; height:20px " src="asset/ibm.png " alt=" "></p>
                             <div class="mentor_read_more ">
                                 <a class=" read_more_btn btn " href="# ">Read more ></a>
                                 <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
@@ -620,10 +606,10 @@
                 </div>
                 <div class="mentor-item ">
                     <div class="card card-item " style="width: 18rem; ">
-                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <img style="height: 210px; " class="card-img-top " src="asset/male.jpg " alt="Card image cap " class="person ">
                         <div class="card-body ">
                             <h5 class="card-title ">Mahmud Shakil</h5>
-                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <p>EX <img style="width: 40%; height:20px " src="asset/ibm.png " alt=" "></p>
                             <div class="mentor_read_more ">
                                 <a class=" read_more_btn btn " href="# ">Read more ></a>
                                 <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
@@ -633,10 +619,10 @@
                 </div>
                 <div class="mentor-item ">
                     <div class="card card-item " style="width: 18rem; ">
-                        <img style="height: 210px; " class="card-img-top " src="{% static '' %}asset/male.jpg " alt="Card image cap " class="person ">
+                        <img style="height: 210px; " class="card-img-top " src="asset/male.jpg " alt="Card image cap " class="person ">
                         <div class="card-body ">
                             <h5 class="card-title ">Mahmud Shakil</h5>
-                            <p>EX <img style="width: 40%; height:20px " src="{% static '' %}asset/ibm.png " alt=" "></p>
+                            <p>EX <img style="width: 40%; height:20px " src="asset/ibm.png " alt=" "></p>
                             <div class="mentor_read_more ">
                                 <a class=" read_more_btn btn " href="# ">Read more ></a>
                                 <a class="linkedin_icon " href=" "> <i style="color:#0e76a8; " class="fab fa-linkedin "></i></a>
@@ -673,48 +659,45 @@
 
     <!-- softanbess mentor ends -->
 
-   
+    <!-- partnership starts -->
 
-        <!-- partnership starts -->
+    <section id="partnership" style="background-color:whitesmoke ; " class="section pt-5 pb-5 ">
+        <div class="container ">
+            <h3 style="text-align: center; ">Our alumni work at reputed technology companies and promising startups</h3>
+            <div class="row partnership pt-5 ">
 
-        <section id="partnership" style="background-color:whitesmoke ; " class="section pt-5 pb-5 ">
-            <div class="container ">
-                <h3 style="text-align: center; ">Our alumni work at reputed technology companies and promising startups</h3>
-                <div class="row partnership pt-5 ">
-    
-                    <div class="col-sm-6 col-md-3 individul-part d-flex justify-content-center ">
-                        <!-- <div class="partnership-items "> -->
-                            <div class="partnership-item  ">
-                                <img style="width: 100%; " src="{% static 'asset/partner_1.jpeg' %}" alt=" ">
-                            </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 individul-part d-flex justify-content-center ">
-                        <div class="partnership-item ">
-                            <img style="width: 100%; " src="{% static 'asset/partner_2.png' %}" alt=" ">
+                <div class="col-sm-6 col-md-3 individul-part d-flex justify-content-center ">
+                    <!-- <div class="partnership-items "> -->
+                        <div class="partnership-item  ">
+                            <img style="width: 100%; " src="asset/partner_1.jpeg" alt=" ">
                         </div>
+                </div>
+                <div class="col-sm-6 col-md-3 individul-part d-flex justify-content-center ">
+                    <div class="partnership-item ">
+                        <img style="width: 100%; " src="asset/partner_2.png" alt=" ">
                     </div>
-                    <div class="col-sm-6 col-md-3 individul-part d-flex justify-content-center ">
-                            <div class="partnership-item ">
-                                <img style="width: 100%; " src="{% static 'asset/partner_3.png' %}" alt=" ">
-                            </div>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-sm-6 col-md-3 individul-part d-flex justify-content-center ">
+                </div>
+                <div class="col-sm-6 col-md-3 individul-part d-flex justify-content-center ">
                         <div class="partnership-item ">
-                         
-                            <img style="width: 100%; " src="{% static 'asset/tata-power.png' %}" alt=" ">
+                            <img style="width: 100%; " src="asset/partner_3.png" alt=" ">
                         </div>
                     <!-- </div> -->
                 </div>
-                    
-                </div>
-    
-                   
-                   
-                </div>
+                <div class="col-sm-6 col-md-3 individul-part d-flex justify-content-center ">
+                    <div class="partnership-item ">
+                        <img style="width: 100%; " src="asset/tata-power.png" alt=" ">
+                    </div>
+                <!-- </div> -->
             </div>
-        </section>
-        <!-- partnership ends -->
+                
+            </div>
+
+               
+               
+            </div>
+        </div>
+    </section>
+    <!-- partnership ends -->
 
 
 <!-- get to know us starts -->
@@ -729,7 +712,7 @@
                     <div class="card ">
                         <div class="card-body text-center ">
                             <div class="mt-4">
-                                <h5> <img style="width: 15%;" src="{% static 'asset/aa.png' %}" alt=" "> InterviewBit </h5>
+                                <h5> <img style="width: 15%;" src="asset/aa.png" alt=" "> InterviewBit </h5>
                             </div>
                             <div class="mt-4 ">
                                 <p>We teach you the basics of some of the most important topics in any <b>Softanbees developer’s toolkit</b> , through 1-2 day live classes taken by some of our top Sofanbess Academy faculty. You can use these especially to
@@ -781,7 +764,6 @@
 
 
     <!-- Footer -->
-<!-- Footer -->
 <!-- Footer -->
 <footer id="footer" class="footer text-dark d-flex-column text-center">
     <hr class="mt-0">
@@ -951,21 +933,20 @@
   
   <!-- Footer -->
 <!-- Ends footer -->
-<!-- Ends footer -->
 
     <!-- JQuery -->
     <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-    <script type='text/javascript' src='{% static "asset/js/jquery.particleground.min.js" %}'></script>
-    <script type='text/javascript' src='{% static "asset/js/demo.js" %}'></script>
+    <script type='text/javascript' src='asset/js/jquery.particleground.min.js'></script>
+    <script type='text/javascript' src='asset/js/demo.js'></script>
     <!-- Bootstrap tooltips -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-   <script src="{% static 'asset/js/jquery.countup.js' %}"></script>
+   <script src="asset/js/jquery.countup.js"></script>
     <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js "></script>
-    <script src="{% static 'asset/js/vanillajs-scrollspy.min.js' %}"></script>
+    <script src="asset/js/vanillajs-scrollspy.min.js"></script>
 
 
 </body>
@@ -973,10 +954,14 @@
 </html>
 
 <script>
+
+
    
     const navbar = document.querySelector("#navbar");
     const scrollspy = new VanillaScrollspy(navbar);
     scrollspy.init();
+
+    
          
     $(document).ready(function() {
         $("#login-btn-click").click(function() {
@@ -1003,7 +988,6 @@
 
     });
 
-
     $('.tab-links').click( function() {
 	
         var tabID = $(this).attr('data-tab');
@@ -1012,6 +996,8 @@
         
         $('#tab-'+tabID).addClass('active').siblings().removeClass('active');
       });
+
+
 
 
 
