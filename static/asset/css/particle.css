@@ -10,6 +10,7 @@
 .input-btn-main{
   border-radius: 10px !important;
   height: 55px  !important;
+  border: 2px solid #f16161 !important;
 }
 
 
@@ -31,9 +32,9 @@
     width: 165px !important;
     text-decoration: none;
     text-align: center;
-    color: #17171d;
+    color:white;
     background-color: #f16161;
-    border-radius: 10px !important;
+    border-radius: 1px 5px 5px 1px !important;
     border: 5px solid #f16161 !important;
     border-width: 2px !important;
     border-style: solid !important;
@@ -49,7 +50,7 @@
   }
   
   .btn-journey:hover {
-    color: #17171d;
+    color: white;
     text-decoration: none;
     box-shadow: 0 5px 25px #f76c6c;
     /* box-shadow: 3px 3px 3px 3px #f76C6C; */
