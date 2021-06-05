@@ -33,13 +33,13 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # regsitering custom app (apply)
     'apply.apps.ApplyConfig',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'apply'
 ]
 
 MIDDLEWARE = [
@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'softanbees_web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'company_site',
         'USER': 'root',
         'PASSWORD': '',
@@ -97,7 +97,7 @@ DATABASES = {
     }
 }
 
-# python manage.py makemigrations 
+# python manage.py makemigrations
 # python manage.py migrate
 # python manage.py createsuperuser
 

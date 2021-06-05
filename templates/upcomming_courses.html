@@ -1,0 +1,141 @@
+{% load static %}
+<!-- Course starts -->
+<section id="courses" class="section upcomming_courses" style="background-color: antiquewhite;">
+    <div class="container pt-5">
+        <h4 class="text-center">UPCOMING COURSES AND PROGRAMS</h4>
+        <br />
+        <!-- Nav tabs -->
+        <ul class="nav justify-content-center nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active tab_link_design" data-toggle="tab" href="#home">Data Sicence</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link tab_link_design" data-toggle="tab" href="#menu1"
+          >Business Analytics</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link tab_link_design" data-toggle="tab" href="#menu2"
+          >Machine Learning</a
+        >
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="home" class="tab_main_content container tab-pane active">
+        <br />
+        <div class="items-course">
+
+            <div class="item-course">
+                <div class="card" style="width: 20rem; height: 30rem;">
+                    <img style="height: 200px !important;" class="card-img-top" src="{% static 'asset/data-science-with-r.jpg' %}" alt="Card image cap" />
+                    <div class="card-body recomonded-card">
+                        <h5>Practical Data Science with R</h5>
+                        <p class="card-text">
+                            R provides objects model and visualize data.
+                            R is used for data analysis. and statistical modeling.
+                            R is an environment for statistical analysis.
+                        </p>
+                         {% if request.session.email %}
+                                <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog </a>
+                         {% else %}
+                                  <a href="" data-target="#exampleModal" data-toggle="modal">Comming Soon.. </a>
+                         {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="item-course">
+                <div class="card" style="width: 20rem; height: 30rem;">
+                <img style="height: 200px !important;"
+                    class="card-img-top"
+                    src="{% static '' %}asset/data science-1.jpg"
+                    alt="Card image cap"
+                />
+                    <div class="card-body recomonded-card">
+                            <h5>Industrial Data Science with Python</h5>
+                            <p class="card-text">
+                                For data scientists,need to incorporate statistical code into production databases or integrate data with web-based applications,
+                                Python is often the ideal choice.
+                            </p>
+                            {% if request.session.email %}
+                                   <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog </a>
+                            {% else %}
+                                     <a href="" data-target="#exampleModal" data-toggle="modal">Comming Soon.. </a>
+                            {% endif %}
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    </div>
+    <div id="menu1" class=" tab_main_content container tab-pane fade">
+        <br />
+        <div class="items-course">
+            <div class="item-course">
+                <div class="card" style="width: 20rem; height: 30rem;">
+                    <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/data-analyst.png" alt="Card image cap" />
+                    <div class="card-body recomonded-card">
+                        <h5> Data Analyst</h5>
+                        <p class="card-text">
+                            Data Analysis become one of the most high-in-demand jobs around the world. As a result,
+                            Data Analyst salary in India is significantly higher than other software related professionals
+                        </p>
+                        {% if request.session.email %}
+                               <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog </a>
+                        {% else %}
+                                 <a href="" data-target="#exampleModal" data-toggle="modal">Comming Soon.. </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="menu2" class="tab_main_content container tab-pane fade">
+        <br />
+        <div class="items-course">
+            <div class="item-course">
+                <div class="card" style="width: 20rem; height: 30rem;">
+                    <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/deep learning.jpeg" alt="Card image cap" />
+                    <div class="card-body recomonded-card">
+                        <h5>Deep learning Mastery</h5>
+                        <p class="card-text">
+                            Deep learning is a  artificial intelligence that has networks capable of learning unsupervised from
+                            data that is unstructured or unlabeled.
+                        </p>
+                        {% if request.session.email %}
+                               <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog </a>
+                        {% else %}
+                                 <a href="" data-target="#exampleModal" data-toggle="modal">Comming Soon.. </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="item-course">
+                <div class="card" style="width: 20rem; height: 30rem;">
+                    <img style="height: 200px !important;" class="card-img-top" src="{% static '' %}asset/fusion-course.png" alt="Card image cap" />
+                    <div class="card-body recomonded-card">
+                        <h5>Fusion Course for job (India context)</h5>
+                        <p class="card-text">
+                            Deep learning is a  artificial intelligence that has networks capable of learning unsupervised from
+                            data that is unstructured or unlabeled.
+                        </p>
+                        {% if request.session.email %}
+                               <a href="" data-target="#exampleModal" data-toggle="modal">Download Catalog </a>
+                        {% else %}
+                                 <a href="" data-target="#exampleModal" data-toggle="modal">Comming Soon.. </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<!-- course ends -->

@@ -6,7 +6,13 @@ class ApplyModel(models.Model):
     name = models.CharField(max_length=200,null=True)
     email = models.CharField(max_length=200,null=True)
     profession = models.CharField(max_length=50,null=True)
-    
+
 
     def __str__(self):
         return self.name
+
+class EmailModel(models.Model):
+    only_email = models.CharField(max_length=200,null=True)
+
+    def __str__(self):
+        return self.only_email

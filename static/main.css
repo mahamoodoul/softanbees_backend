@@ -244,7 +244,7 @@
 }
 
 /* .border-middle{
-    border-right: 5px solid #f76c6c; 
+    border-right: 5px solid #f76c6c;
 }
 .corporate {
   background-color: #fc4141;
@@ -459,13 +459,13 @@ p {
 .items {
   display: flex;
   overflow-x: auto;
-  
+
 }
 
 .items .item {
-  min-width: 475px;
-  width: 475px;
-  height: 394px;;
+  min-width: 358px;
+  width: 358px;
+  height: 485px;
   background: white;
   margin: 10px;
   border-radius: 5px;
@@ -489,7 +489,7 @@ p {
 }
 
 .flex-item img {
-  width: 80%;
+  width: 70%;
   height: 108px;
   border-radius: 50%;
 }
@@ -501,6 +501,14 @@ p {
 .image-name-testimonial {
   padding-left: 15px;
   padding-top: 10px;
+}
+
+.testimonial-content img {
+  float: right !important;
+  width: 26%;
+  padding: 5px;
+  height: 84px;
+  border-radius: 50%;
 }
 
 .mentroship_section {
@@ -523,7 +531,7 @@ p {
 
 .mentor-items .mentor-item {
   min-width: 323px;
-  height: 400px;
+  height: 494px;
   margin: 5px;
 }
 

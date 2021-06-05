@@ -1,0 +1,475 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="{% static 'asset/css/all.min.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'asset/css/particle.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    <!-- nabvar starts -->
+
+    <nav class="main_nav_content fixed-top navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
+                <ul id="navbar" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#courses">Curriculam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trusting">Benifits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Teaching">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Mentorship">Mentorship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#partnership">Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#footer">About Us</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">FAQs</a>
+                    </li> -->
+                </ul>
+                <div class="d-flex">
+                    <button data-target="#exampleModal" data-toggle="modal" class="button_style_navbar " type="button ">Apply Now</button>
+                    <!-- <button data-target="#exampleModal1" data-toggle="modal" class="button_style_navbar_login " type="submit ">
+              Login
+            </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar ends -->
+
+
+    {% block body_block %} {% endblock %}
+
+
+
+
+<!-- Footer -->
+    <footer id="footer" class="footer text-dark d-flex-column text-center">
+        <hr class="mt-0">
+        <!--Social buttons-->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a target="_blank" class="btn btn-outline-dark btn-floating m-1" href="https://www.facebook.com/softanbees" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <!-- Instagram -->
+          <a target="_blank" class="btn btn-outline-dark  btn-floating m-1" href="https://www.instagram.com/softanbees/" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a target="_blank" class="btn btn-outline-dark  btn-floating m-1" href="https://www.linkedin.com/company/softanbees-technologies/" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <div >
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-dark mb-4">
+                  <input required id="only_email_footer" type="email" id="form5Example2" class="form-control" placeholder="Enter Your Email Here" />
+                  <!-- <label class="form-label" for="form5Example2">Email address</label> -->
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button id="only_email_btn_click_footer" type="submit" class="button-style mb-4 newsletter_btn">
+                  Subscribe  <i class="fas fa-mail-bulk"> </i>
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p class="p-4">
+            Softanbees Technologies Private Limited, an analytics company provides state-of-the-art data-driven analytics solutions to different conglomerates. We are here to share our corporate curated experience to create a sustainable data infrastructure
+          </p>
+        </section>
+        <!-- Section: Text -->
+        <!--/.Social buttons-->
+        <hr class="mb-0">
+        <!--Footer Links-->
+        <div class="container text-left text-md-center">
+          <div class="row">
+            <!--First column-->
+            <div class="col-md-3 mx-auto shfooter">
+              <h5 class="my-2 font-weight-bold d-none d-md-block">Product</h5>
+              <div class="d-md-none title" data-target="#Product" data-toggle="collapse">
+                <div class="mt-3 font-weight-bold">Product
+                  <div class="float-right navbar-toggler">
+                    <i class="fas fa-angle-down"></i>
+                    <i class="fas fa-angle-up"></i>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-unstyled collapse" id="Product">
+                <li><a href="">Create Websites</a></li>
+                <li><a href="">Secure Cloud Hosting</a></li>
+                <li><a href="">Engage Your Audience</a></li>
+                <li><a href="">Website Support</a></li>
+              </ul>
+            </div>
+            <!--/.First column-->
+            <hr class="clearfix w-100 d-md-none mb-0">
+            <!--Second column-->
+            <div class="col-md-3 mx-auto shfooter">
+              <h5 class="my-2 font-weight-bold d-none d-md-block">Company</h5>
+              <div class="d-md-none title" data-target="#Company" data-toggle="collapse">
+                <div class="mt-3 font-weight-bold">Company
+                  <div class="float-right navbar-toggler">
+                    <i class="fas fa-angle-down"></i>
+                    <i class="fas fa-angle-up"></i>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-unstyled collapse" id="Company">
+                <li><a href="">About</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+            <!--/.Second column-->
+            <hr class="clearfix w-100 d-md-none mb-0">
+            <!--Third column-->
+            <div class="col-md-3 mx-auto shfooter">
+              <h5 class="my-2 font-weight-bold d-none d-md-block">Resources</h5>
+              <div class="d-md-none title" data-target="#Resources" data-toggle="collapse">
+                <div class="mt-3 font-weight-bold">Resources
+                  <div class="float-right navbar-toggler">
+                    <i class="fas fa-angle-down"></i>
+                    <i class="fas fa-angle-up"></i>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-unstyled collapse" id="Resources">
+                <li><a href="">Blog</a></li>
+                <li><a href="">eBooks</a></li>
+                <li><a href="">Whitepapers</a></li>
+                <li><a href="">Comparison Guide</a></li>
+                <li><a href="">Website Grader</a></li>
+              </ul>
+            </div>
+            <!--/.Third column-->
+            <hr class="clearfix w-100 d-md-none mb-0">
+            <!--Fourth column-->
+            <div class="col-md-3 mx-auto shfooter">
+              <h5 class="my-2 font-weight-bold d-none d-md-block">Get Help</h5>
+              <div class="d-md-none title" data-target="#Get-Help" data-toggle="collapse">
+                <div class="mt-3 font-weight-bold">Get Help
+                  <div class="float-right navbar-toggler">
+                    <i class="fas fa-angle-down"></i>
+                    <i class="fas fa-angle-up"></i>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-unstyled collapse" id="Get-Help">
+                <li><a href="" target="_blank">Help Center</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms</a></li>
+                <li><a href="">Login</a></li>
+              </ul>
+            </div>
+            <!--/.Fourth column-->
+          </div>
+        </div>
+        <!--/.Footer Links-->
+        <hr class="mb-0">
+        <!--Copyright-->
+        <div class="py-3 text-center">
+          Copyright @Softnbees Private Comapny Ltd 2019-
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+        </div>
+        <!--/.Copyright-->
+      </footer>
+
+<!-- Ends footer -->
+
+        <!-- JQuery -->
+        <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
+        <script type='text/javascript' src='{% static "asset/js/jquery.particleground.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "asset/js/demo.js" %}'></script>
+        <!-- Bootstrap tooltips -->
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+       <script src="{% static 'asset/js/jquery.countup.js' %}"></script>
+        <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js "></script>
+        <script src="{% static 'asset/js/vanillajs-scrollspy.min.js' %}"></script>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+
+$("#only_email_btn_click_footer").click(function(e) {
+  e.preventDefault();
+  var only_email_f = $("#only_email_footer").val();
+  if (!validateEmail(only_email_f)) {
+    alert(only_email_f + " is not valid :(")
+  } else {
+      $.ajax({
+          type: 'POST',
+          url: "{% url 'send_only_email' %}",
+          dataType:"json",
+          data: {
+                 "email": only_email_f,
+                 },
+          success: function (response) {
+            var res_output = (response['message']);
+            window.location.reload();
+            // console.log(res_output);
+            // $("#alert_msg").html(res_output);
+            // $("#account_form").trigger('reset');
+            // $("#exampleModal").modal('hide');
+            // $('#exampleModal1').modal('show');
+          },
+          error: function (response) {
+              alert(response["responseJSON"]["error"]);
+          }
+      })
+    }
+})
+
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+
+
+$("#only_email_btn_click").click(function(e) {
+  e.preventDefault();
+  var only_email = $("#only_email").val();
+  if (!validateEmail(only_email)) {
+    alert(only_email + " is not valid :(")
+  } else {
+      $.ajax({
+          type: 'POST',
+          url: "{% url 'send_only_email' %}",
+          dataType:"json",
+          data: {
+                 "email": only_email,
+                 },
+          success: function (response) {
+            var res_output = (response['message']);
+            window.location.reload();
+            // console.log(res_output);
+            // $("#alert_msg").html(res_output);
+            // $("#account_form").trigger('reset');
+            // $("#exampleModal").modal('hide');
+            // $('#exampleModal1').modal('show');
+          },
+          error: function (response) {
+              alert(response["responseJSON"]["error"]);
+          }
+      })
+    }
+  })
+
+
+
+
+
+
+
+
+
+
+
+$("#page_load").click(function(e){
+  window.location.reload();
+});
+// var $j = jQuery.noConflict();
+$("#apply_now_btn").click(function (e) {
+       // preventing from page reload and default actions
+       e.preventDefault();
+       var name = $("#your_name").val();
+       var email = $("#your_email").val();
+       var all_profession = document.querySelectorAll('input[name="toggle"]');
+       var profession;
+       for (const one of all_profession) {
+           if (one.checked) {
+               profession = one.value;
+                   break;
+               }
+           }
+       console.log(typeof profession)
+/*       alert(profession); */
+       if (name.length == 0) {
+           alert(" Name field is empty!");
+       } else if (!validateEmail(email)) {
+            alert(email + " is not valid :(")
+       }  else if (profession == null) {
+           alert("Selct One Profession");
+       } else {
+           $.ajax({
+               type: 'POST',
+               url: "{% url 'send_info' %}",
+               dataType:"json",
+               data: {"name": name,
+                      "email": email,
+                      "profession": profession,
+                      },
+               success: function (response) {
+                 var res_output = (response['message']);
+                 $("#alert_msg").html(res_output);
+                 // $("#account_form").trigger('reset');
+                 // $("#exampleModal").modal('hide');
+                 // $('#exampleModal1').modal('show');
+               },
+               error: function (response) {
+                   alert(response["responseJSON"]["error"]);
+               }
+           })
+       }
+   });
+
+
+        const navbar = document.querySelector("#navbar");
+        const scrollspy = new VanillaScrollspy(navbar);
+        scrollspy.init();
+
+        $(document).ready(function() {
+            $("#login-btn-click").click(function() {
+                $('#exampleModal').modal('hide');
+            });
+
+            $("#create_account_click").click(function() {
+                $('#exampleModal1').modal('hide');
+
+            });
+
+            $('.count').countUp();
+            $('.count').countDown();
+
+            $('.count').countUp({
+                'time': 4000,
+                'delay': 10
+              });
+
+            $('.count').countDown({
+                'time': 4000,
+                'delay': 10
+             });
+
+        });
+
+
+        $('.tab-links').click( function() {
+
+            var tabID = $(this).attr('data-tab');
+
+            $(this).addClass('active').siblings().removeClass('active');
+
+            $('#tab-'+tabID).addClass('active').siblings().removeClass('active');
+          });
+
+          // Send the csrftoken
+         function getCookie(name) {
+             var cookieValue = null;
+             if (document.cookie && document.cookie != '') {
+                 var cookies = document.cookie.split(';');
+                 for (var i = 0; i < cookies.length; i++) {
+                     var cookie = jQuery.trim(cookies[i]);
+                     // Does this cookie string begin with the name we want?
+                     if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                         cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                         break;
+                     }
+                 }
+             }
+             return cookieValue;
+         }
+
+         var csrftoken = getCookie('csrftoken');
+
+         function csrfSafeMethod(method) {
+             // these HTTP methods do not require CSRF protection
+             return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+         }
+
+         $.ajaxSetup({
+             beforeSend: function(xhr, settings) {
+                 if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                     xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                 }
+             }
+         });
+
+
+
+
+
+
+    </script>
