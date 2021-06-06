@@ -7,22 +7,24 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <link rel="stylesheet" href="{% static 'asset/css/all.min.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet" /> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'main.css' %}" />
     <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <link rel="stylesheet" href="{% static 'asset/css/particle.css' %}" />
+    <link rel="stylesheet" href="{% static 'asset/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'asset/css/particle.css' %}" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'asset/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'asset/css/particle.css' %}" />
 </head>
 
 
@@ -31,7 +33,7 @@
 
     <nav class="main_nav_content fixed-top navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="{% url 'apply' %}"> <img style="height: 47px;" src="{% static "asset/logo.jpg" %}" alt=""> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -383,7 +385,15 @@ $("#apply_now_btn").click(function (e) {
                       },
                success: function (response) {
                  var res_output = (response['message']);
-                 $("#alert_msg").html(res_output);
+                 console.log(res_output);
+                 if (res_output == "exist"){
+                   $("#alert_msg").html("Email already Exist.");
+                 }else if (res_output == 'success') {
+                  $("#alert_msg").html("You Have Applied Succesfully.");
+                  $("#your_name").val("");
+                  $("#your_email").val("");
+                 }
+                 // $("#alert_msg").html(res_output);
                  // $("#account_form").trigger('reset');
                  // $("#exampleModal").modal('hide');
                  // $('#exampleModal1').modal('show');
@@ -394,6 +404,14 @@ $("#apply_now_btn").click(function (e) {
            })
        }
    });
+
+
+
+
+   $(".nav-item").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).parent().addClass("active");
+});
 
 
         const navbar = document.querySelector("#navbar");
