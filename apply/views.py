@@ -3,7 +3,7 @@ from .models import ApplyModel, EmailModel
 from django.http import JsonResponse
 # Create your views here.
 
-def home_apply(request):
+def home(request):
     template_name = 'home.html'
     return render(request,template_name)
 
