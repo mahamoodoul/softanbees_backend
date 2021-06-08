@@ -392,7 +392,7 @@
 
 .tab-content_intern h3,
 p {
-  font-weight: 700;
+  font-weight: 400;
   color: #17171d;
 }
 
@@ -728,7 +728,7 @@ p {
 
 /* footer start  */
 .footer {
-  background-color: lightgray;
+  background-color: white;
 }
 
 .newsletter_btn{
@@ -741,6 +741,9 @@ p {
   font-weight: 700;
 }
 
+.list-unstyled a{
+  font-weight: 700 !important;
+}
 
 
 /* footer end */
@@ -811,6 +814,10 @@ p {
 /* partnership ends */
 
 @media only screen and (max-width: 770px) {
+
+  .nav-link{
+    padding-left: 20px !important;
+  }
   .banner_transparent {
     margin-top: 0rem;
     background: whitesmoke;
@@ -919,4 +926,13 @@ p {
   .tabs_intern {
     margin-left: 0px !important;
   }
+
+  /* footer color */
+.color_bg_mobile{
+  background-color:black;
+  color: white;
+  padding: 8px;
+  border-radius: 3px;
+}
+  /* footer end */
 }

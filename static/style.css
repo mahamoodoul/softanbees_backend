@@ -17,6 +17,7 @@ body {
 footer a{
   color: black !important;
   padding: 5px 0px 5px 0px;
+  font-weight: 700 !important;
 }
 
 a{
