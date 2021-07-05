@@ -2,7 +2,7 @@
   box-sizing: border-box;
  /* font-family: 'Roboto', sans-serif;*/
   font-family: 'Montserrat', sans-serif;
-  
+
 }
 html,
 body {
@@ -101,7 +101,7 @@ a{
 
 /* Medium devices (landscape tablets, 700px and up) */
 @media only screen and (max-width: 700px) {
-  
+
   .shfooter ul {
     margin-bottom: 0;
   }
@@ -156,11 +156,12 @@ a{
     display: inline-block;
     padding: 0;
   }
+  
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 320px) {
-  
+
   .shfooter ul {
     margin-bottom: 0;
   }
@@ -187,5 +188,3 @@ a{
     padding: 0;
   }
 }
-
-

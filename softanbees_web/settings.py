@@ -142,7 +142,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / BASE_DIR / 'static'
 ]
-
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, '/shakil/')
 # STATIC_ROOT = 'static'
 
 # Default primary key field type

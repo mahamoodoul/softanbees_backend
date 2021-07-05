@@ -906,6 +906,9 @@ p {
     border-right: 0px solid #f76c6c;
     border-bottom: 5px solid #f76c6c;
   }
+  #particles_section{
+    padding-bottom: 190px !important;
+  }
 
   /* benifits ends */
 
@@ -926,6 +929,25 @@ p {
   .tabs_intern {
     margin-left: 0px !important;
   }
+
+.input-group {
+      display: block !important;
+}
+.input-btn-main{
+  width: 100% !important;
+}
+
+.input-group-append{
+  text-align: center !important;
+}
+.btn-journey {
+    margin-left: 10px !important;
+    margin-top: 21px !important;
+    width: 165px !important;
+  }
+
+
+
 
   /* footer color */
 .color_bg_mobile{

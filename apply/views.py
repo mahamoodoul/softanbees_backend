@@ -37,3 +37,8 @@ def send_email(request):
             request.session['email'] = email
             message = "Your Account Created Successfully"
         return JsonResponse({"message": message}, status=200)
+
+
+def CourseDetails(request):
+    template_name = 'course_details/details.html'
+    return render(request,template_name)

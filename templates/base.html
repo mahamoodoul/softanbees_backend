@@ -74,12 +74,126 @@
         </div>
     </nav>
 
+
+    <!-- modal login starts -->
+<div class="modal left fade" id="exampleModal1" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content pt-5">
+          <div class="modal-body p-3">
+              <div class=" pb-4">
+                  <h3>Log In</h3>
+                  <div class="pt-3">
+                      OR
+                      <a id="create_account_click" style="text-decoration: none;" data-target="#exampleModal" data-toggle="modal" href="">Creating a Softanbees Account</a>
+                  </div>
+                  <div>
+                      <form>
+                          <div class="form-group">
+                              <label class="d-flex justify-content-start" for="exampleInputEmail1">Email<b style="color: red;">*</b> </label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          </div>
+                          <div class="form-group">
+                              <label class="d-flex justify-content-start" for="exampleInputPassword1">Password<b style="color: red;">*</b> </label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                          </div>
+                          <button style="width: 100%; background-color: #f76C6C !important; border-color: #f76C6C !important;" type="submit" class="btn btn-primary">Sign Up</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- modal login ends -->
+
+<!-- modal registraion starts -->
+<div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content pt-5">
+          <div class="modal-body pt-1">
+              <div class="text-center pb-4">
+                  <h3>Apply Now to Unleash Your Data Career</h3>
+                  <!-- <p>Log in using</p>
+                  <div class="d-flex justify-content-around">
+                      <a href=""><i  class="fab fa-facebook fa-3x"></i></a>
+                      <a style="color: #4c68d7;" href=""><i class="fab fa-linkedin fa-3x"></i></a>
+                      <a style="color: #4078c0;" href=""><i  class="fab fa-github fa-3x"></i></a>
+                      <a href=""><i  class="fab fa-google fa-3x"></i></a>
+                  </div> -->
+                  <div class="d-flex justify-content-around pt-4 pb-4">
+                      <!-- <hr style="width:50%" , size="3" , color=black>
+                      <p> OR </p>
+                      <hr style="width:50%" , size="3" , color=black> -->
+                  </div>
+                  <div>
+                    <p id="alert_msg" style="color:red"></p>
+                      <form method="post" enctype="multipart/form-data" >
+                          {% csrf_token %}
+                          <div class="form-group">
+                              <label class="d-flex justify-content-start" for="exampleInputEmail1">Full Name <b style="color: red;">*</b> </label>
+                              <input required type="text" name ="name" class="form-control" id="your_name" placeholder="Enter Your Name">
+                          </div>
+                          <div class="form-group">
+                              <label class="d-flex justify-content-start" for="exampleInputEmail1">Email<b style="color: red;">*</b> </label>
+                               {{ error }}
+                              <input required type="email" name="email" class="form-control" id="your_email" aria-describedby="emailHelp" placeholder="Enter email">
+                          </div>
+                          <!-- <div class="form-group">
+                              <label class="d-flex justify-content-start" for="exampleInputPassword1">Phone<b style="color: red;">*</b> </label>
+                              <p class="d-flex justify-content-start"><small>OTP will be sent to this number for verification</small></p>
+                              <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone Number">
+                          </div> -->
+                          <!-- <div class="form-group">
+                              <label class="d-flex justify-content-start" for="exampleInputPassword1">Profession<b style="color: red;">*</b> </label>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                  <label class="form-check-label" for="inlineCheckbox1">College Student</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                  <label class="form-check-label" for="inlineCheckbox2">Working Profesion</label>
+                              </div>
+                          </div> -->
+                          <div class="form-group">
+                              <h6>Your Profession </h6>
+                              <div id="profession">
+                                  <label class="blue" >
+                                      <input id="check1" type="radio" name="toggle" value="student">
+                                      <span>College Student</span></label>
+                                  <label class="green">
+                                      <input id="check1" type="radio" name="toggle" value="working"><span>Working Profession</span></label>
+                              </div>
+                          </div>
+                          <button id="apply_now_btn" style="width: 100%; background-color: #f76C6C !important; border-color: #f76C6C !important;" type="submit" class="btn btn-primary">Apply Now</button>
+                      </form>
+                      <!-- <small>By creating an account I have read and agree to Softanbees <a href="">Terms</a> and <a href="">Privacy Policy</a></small>
+                      <div class="pt-3">
+                          <p>Already a member?
+                              <a id="login-btn-click" data-target="#exampleModal1" data-toggle="modal" href="">LOG IN</a>
+                          </p>
+                      </div> -->
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button id="page_load" type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- modal registration ends -->
+
+
     <!-- navbar ends -->
 
 
     {% block body_block %}
-    
-    
+
+
     {% endblock %}
 
 
@@ -147,7 +261,7 @@
         <!-- Section: Text -->
         <section class="mb-4">
           <p class="p-4">
-            Softanbees Technologies Private Limited, an analytics company provides state-of-the-art data-driven analytics solutions to different conglomerates. We are here to share our corporate curated experience to create a sustainable data infrastructure
+            We provide state of the art Data driven analytics solution to different industries. We blend our corporate curated experience in our comprehensive training program to create a sustainable talent pool to meet the industrial demand
           </p>
         </section>
         <!-- Section: Text -->
@@ -244,7 +358,7 @@
         <hr class="mb-0">
         <!--Copyright-->
         <div style="font-weight: 700;" class="py-3 p-2 text-center">
-          Copyright @Softnbees Private Comapny Ltd 2019-
+          Copyright @Softnbees Technologies Private Comapny Ltd 2019-
           <script>
             document.write(new Date().getFullYear())
           </script>
@@ -487,10 +601,5 @@ $("#apply_now_btn").click(function (e) {
                  }
              }
          });
-
-
-
-
-
 
     </script>
